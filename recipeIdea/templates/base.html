@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recipe Idea</title>
+
+  </head>
+
+  <body>
+    <style>
+      body {
+        font-family: sans-serif;
+        font-size: 17px;
+        background-color: #fdfdfd;
+      }
+
+     .masthead {
+              background:#3398E1;
+              height: auto;
+              padding-bottom: 15px;
+              box-shadow: 0 16px 48px #E3E7EB;
+              padding-top: 10px;
+    }
+    </style>
+      <div>
+          <a href="{% url 'home' %}" >Home</a>
+
+      </div>
+    </div>
+    </nav>
+
+
+            {% block content %}
+            {% endblock content %}
+
+    <footer>
+              <p>COSC 2418 Final Project by Mason Hall</p>
+    </footer>
+
+  </body>
+</html>
