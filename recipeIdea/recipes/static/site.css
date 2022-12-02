@@ -1,0 +1,21 @@
+.navbar{
+    border-style: solid;
+    border-width: 2px;
+    border-color: blueviolet;
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 5px;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 17px;
+    background-color: #fdfdfd;
+}
+
+.masthead {
+        background:#3398E1;
+        height: auto;
+        padding-bottom: 15px;
+        box-shadow: 0 16px 48px #E3E7EB;
+        padding-top: 10px;
+}
