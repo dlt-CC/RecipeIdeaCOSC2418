@@ -8,10 +8,8 @@
         <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
         <p class="card-text ">{{ object.content | safe }}</p>
       </div>
-      <a href="{% url 'home' %}" >Return &rarr;</a>
+      <a href="{% url 'comment' post.slug %}" >Leave a comment &rarr;</a>
     </div>
-    {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
   </div>
 </div>
-
 {% endblock content %}
