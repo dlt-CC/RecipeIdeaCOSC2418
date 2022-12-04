@@ -1,7 +1,7 @@
 from django.views import generic
 from .models import Post
-from .forms import CommentForm
-from django.shortcuts import render, get_object_or_404
+from .forms import CommentForm, RecipeForm
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 
@@ -22,8 +22,14 @@ def Login(request):
     return HttpResponse(template.render())
 
 def add(request):
-    template = loader.get_template('add.html')
-    return HttpResponse(template.render())
+    recipe_form = RecipeForm(request.POST or None)
+    if request.method == "POST":
+        if recipe_form.is_valid():
+            recipe = recipe_form.save(commit=False) # saves the recipe
+            recipe.save()
+            return redirect("home")
+    else:
+        return render(request, "add.html", {"recipe_form": recipe_form})
     
 def comment(request, slug):
     template_name = 'comment.html'
