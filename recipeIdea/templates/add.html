@@ -8,7 +8,7 @@
 
 <body>
     <div>
-        <h3>Add a Recipe</h3>
+        <h2 style="font-family: serif; color:rgb(80, 50, 125);">Add a Recipe</h2>
         <form id='RecipeForm' method="POST" style="margin-top: 1.3em;">
             {% csrf_token %}
             {{ recipe_form.as_p }}
